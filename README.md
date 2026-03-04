@@ -2,338 +2,262 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planos - Nutrição Esportiva e Clínica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nutrição Esportiva & Clínica para resultados reais com acompanhamento personalizado. Atendimentos clínicos e esportivos com foco em saúde e performance.">
+    <meta name="author" content="Helio Escaleira">
+    <title>Folder - Nutrição Esportiva e Clínica</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap">
+    <style>
+        /* RESET e ESTILO GERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
-}
+        .folder-container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
 
-body{
-background:linear-gradient(135deg,#2ecc71,#27ae60);
-padding:30px;
-}
+        /* CAPA COM LOGO DE FUNDO */
+        .cover {
+            background: linear-gradient(135deg, rgba(46,204,113,0.95) 0%, rgba(39,174,96,0.95) 50%, rgba(52,152,219,0.95) 100%);
+            padding: 100px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.container{
-max-width:1100px;
-margin:auto;
-background:#fff;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 25px 50px rgba(0,0,0,0.3);
-}
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: url('path_to_logo.png') center/contain no-repeat;
+            opacity: 0.25;
+            filter: blur(2px);
+        }
 
-header{
-background:linear-gradient(135deg,#27ae60,#2ecc71);
-color:#fff;
-padding:60px 20px;
-text-align:center;
-}
+        .cover-content {
+            position: relative;
+            z-index: 2;
+        }
 
-header h1{
-font-size:42px;
-font-weight:800;
-}
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-header p{
-margin-top:10px;
-font-size:18px;
-opacity:.9;
-}
+        .cover .subtitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-section{
-padding:50px 30px;
-}
+        /* CONTEÚDO INTERNO */
+        .content {
+            padding: 50px 40px;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+        }
 
-.section-title{
-text-align:center;
-font-size:32px;
-font-weight:800;
-margin-bottom:40px;
-color:#2d3436;
-}
+        /* BANNER DESTAQUE */
+        .highlight-banner {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 0 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.table{
-width:100%;
-border-collapse:collapse;
-margin-bottom:40px;
-}
+        .highlight-banner h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-.table th{
-background:#2ecc71;
-color:#fff;
-padding:15px;
-}
+        .highlight-banner p {
+            font-size: 18px;
+            max-width: 500px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
 
-.table td{
-padding:14px;
-border-bottom:1px solid #eee;
-text-align:center;
-}
+        /* ATENDIMENTOS */
+        .section {
+            margin-bottom: 40px;
+        }
 
-.highlight{
-background:#f1fff5;
-font-weight:700;
-color:#27ae60;
-}
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #2d3436;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            justify-content: center;
+        }
 
-.plan-card{
-background:#f8f9fa;
-padding:30px;
-border-radius:15px;
-margin-bottom:30px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
 
-.plan-card h3{
-margin-bottom:15px;
-font-size:22px;
-color:#27ae60;
-}
+        .service-box {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 35px 30px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
 
-.banner{
-background:linear-gradient(135deg,#2ecc71,#27ae60);
-color:white;
-padding:40px;
-text-align:center;
-border-radius:15px;
-margin-top:30px;
-}
+        .service-box:hover {
+            border-color: #2ecc71;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
+        }
 
-.banner h2{
-font-size:28px;
-margin-bottom:20px;
-}
+        .service-box .service-icon {
+            font-size: 55px;
+            margin-bottom: 20px;
+            display: block;
+        }
 
-.cta{
-text-align:center;
-margin:40px 0;
-}
+        .service-box h3 {
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
 
-.btn{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:18px 40px;
-border-radius:40px;
-font-weight:700;
-text-decoration:none;
-transition:.3s;
-}
+        .service-box ul {
+            list-style: none;
+            text-align: left;
+            font-size: 15px;
+            color: #636e72;
+            line-height: 1.9;
+            padding-left: 10px;
+        }
 
-.btn:hover{
-transform:scale(1.05);
-}
+        .service-box ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
 
-footer{
-background:#2d3436;
-color:white;
-text-align:center;
-padding:30px;
-}
+        .service-box ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-@media(max-width:768px){
-.table th,.table td{
-font-size:13px;
-padding:10px;
-}
-header h1{
-font-size:30px;
-}
-.section-title{
-font-size:24px;
-}
-}
-</style>
-</head>
+        /* DIFERENCIAIS */
+        .differentials {
+            background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
 
-<body>
+        .differentials h3 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+        }
 
-<div class="container">
+        .differentials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-<header>
-<h1>📊 Planos de Longo Prazo</h1>
-<p>Quanto mais ciclos, maior seu desconto!</p>
-</header>
+        /* COMO FUNCIONA */
+        .how-it-works {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            text-align: center;
+            gap: 20px;
+        }
 
-<section>
-<h2 class="section-title">PACOTES PRESENCIAIS (avulso R$250)</h2>
+        .step {
+            flex: 1;
+            min-width: 140px;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid #2ecc71;
+        }
 
-<table class="table">
-<tr>
-<th>Pacote</th>
-<th>Duração</th>
-<th>Valor</th>
-<th>Economia</th>
-<th>Desconto</th>
-</tr>
+        .step:hover {
+            transform: translateY(-5px);
+        }
 
-<tr>
-<td>2 ciclos</td>
-<td>3 meses</td>
-<td class="highlight">R$ 440</td>
-<td>R$ 60</td>
-<td>12%</td>
-</tr>
+        .step .step-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+            display: block;
+        }
 
-<tr>
-<td>4 ciclos</td>
-<td>6 meses</td>
-<td class="highlight">R$ 840</td>
-<td>R$ 160</td>
-<td>16%</td>
-</tr>
+        .step h4 {
+            color: #2d3436;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 700;
+        }
 
-<tr>
-<td>8 ciclos</td>
-<td>12 meses</td>
-<td class="highlight">R$ 1.520</td>
-<td>R$ 480</td>
-<td>24%</td>
-</tr>
-</table>
+        .step p {
+            font-size: 13px;
+            color: #636e72;
+            line-height: 1.4;
+        }
 
-<h2 class="section-title">PACOTES ONLINE (avulso R$220)</h2>
-
-<table class="table">
-<tr>
-<th>Pacote</th>
-<th>Duração</th>
-<th>Valor</th>
-<th>Economia</th>
-<th>Desconto</th>
-</tr>
-
-<tr>
-<td>2 ciclos</td>
-<td>3 meses</td>
-<td class="highlight">R$ 390</td>
-<td>R$ 50</td>
-<td>11%</td>
-</tr>
-
-<tr>
-<td>4 ciclos</td>
-<td>6 meses</td>
-<td class="highlight">R$ 740</td>
-<td>R$ 140</td>
-<td>16%</td>
-</tr>
-
-<tr>
-<td>8 ciclos</td>
-<td>12 meses</td>
-<td class="highlight">R$ 1.340</td>
-<td>R$ 420</td>
-<td>24%</td>
-</tr>
-</table>
-</section>
-
-<section>
-<h2 class="section-title">🏆 Planos Especializados</h2>
-
-<div class="plan-card">
-<h3>Plano Atleta</h3>
-<p>Consulta a cada 6 semanas + ajustes via WhatsApp</p>
-<p><strong>2 ciclos:</strong> R$ 500 (11% off)</p>
-<p><strong>4 ciclos:</strong> R$ 950 (15% off)</p>
-<p><strong>8 ciclos:</strong> R$ 1.750 (22% off)</p>
-</div>
-
-<div class="plan-card">
-<h3>Plano Emagrecimento Acelerado</h3>
-<p>3 consultas em 3 meses</p>
-<p><strong>Presencial:</strong> R$ 600 (20% off)</p>
-<p><strong>Online:</strong> R$ 530 (20% off)</p>
-</div>
-
-<div class="plan-card">
-<h3>Plano Família</h3>
-<p>3 pessoas • 24 consultas</p>
-<p><strong>R$ 3.900</strong> → 35% de desconto</p>
-</div>
-</section>
-
-<section>
-<h2 class="section-title">🎯 Comparativo de Economia</h2>
-
-<table class="table">
-<tr>
-<th>Pacote</th>
-<th>Avulso</th>
-<th>Pacote</th>
-<th>Economiza</th>
-</tr>
-
-<tr>
-<td>2 ciclos presencial</td>
-<td>R$ 500</td>
-<td>R$ 440</td>
-<td class="highlight">R$ 60</td>
-</tr>
-
-<tr>
-<td>4 ciclos presencial</td>
-<td>R$ 1.000</td>
-<td>R$ 840</td>
-<td class="highlight">R$ 160</td>
-</tr>
-
-<tr>
-<td>8 ciclos presencial</td>
-<td>R$ 2.000</td>
-<td>R$ 1.520</td>
-<td class="highlight">R$ 480</td>
-</tr>
-
-<tr>
-<td>2 ciclos online</td>
-<td>R$ 440</td>
-<td>R$ 390</td>
-<td class="highlight">R$ 50</td>
-</tr>
-
-<tr>
-<td>4 ciclos online</td>
-<td>R$ 880</td>
-<td>R$ 740</td>
-<td class="highlight">R$ 140</td>
-</tr>
-
-<tr>
-<td>8 ciclos online</td>
-<td>R$ 1.760</td>
-<td>R$ 1.340</td>
-<td class="highlight">R$ 420</td>
-</tr>
-</table>
-
-<div class="banner">
-<h2>🔥 PROMOÇÃO ESPECIAL</h2>
-<p>Pacotes de 8 ciclos ganham 1 avaliação biométrica extra 🎁</p>
-</div>
-
-<div class="cta">
-<a href="https://wa.me/5561981961802" class="btn" target="_blank">
-💬 Agendar Consulta
-</a>
-</div>
-
-</section>
-
-<footer>
-Nutrição Esportiva & Clínica • WhatsApp (61) 98196-1802 • @helio_escaleira
-</footer>
-
-</div>
-
-</body>
-</html>
+        /* CONTATO COM LOGO DE FUNDO */
+        .contact-section {
+            background: linear-gradient
